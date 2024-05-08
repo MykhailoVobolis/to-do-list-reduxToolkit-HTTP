@@ -1,11 +1,11 @@
 // Імпортуємо хук
 import { useSelector } from "react-redux";
-
+import { getTasks } from "../../redux/selectors";
 import css from "./TaskCounter.module.css";
 
 export default function TaskCounter() {
   // Отримуємо масив завдань із стану Redux
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector(getTasks);
 
   // На базі стану Redux отримуємо похідні дані кількості активних і виконаних завдань.
   const count = tasks.reduce(

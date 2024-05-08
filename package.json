@@ -12,6 +12,7 @@
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.2.3",
+    "axios": "^1.6.8",
     "clsx": "^2.1.1",
     "modern-normalize": "^2.0.0",
     "react": "18.2.0",

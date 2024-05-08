@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { statusFilters } from "./constants";
 
+const filtersInitialState = {
+  status: statusFilters.all,
+};
+
 const filtersSlice = createSlice({
   name: "filters",
-  initialState: {
-    status: statusFilters.all,
-  },
+  initialState: filtersInitialState,
   reducers: {
     setStatusFilter(state, action) {
       state.status = action.payload;
@@ -13,6 +15,5 @@ const filtersSlice = createSlice({
   },
 });
 
-// Експортуємо генератори екшенів та редюсер
 export const { setStatusFilter } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;
