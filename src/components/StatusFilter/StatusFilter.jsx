@@ -1,5 +1,5 @@
 import Button from "../Button/Button";
-import { getStatusFilter } from "../../redux/selectors";
+import { selectStatusFilter } from "../../redux/selectors";
 
 // Імпортуємо хуки
 import { useSelector, useDispatch } from "react-redux";
@@ -16,7 +16,7 @@ export default function StatusFilter() {
   const dispatch = useDispatch();
 
   // Отримуємо значення фільтра із стану Redux
-  const filter = useSelector(getStatusFilter);
+  const filter = useSelector(selectStatusFilter);
 
   // Викликаємо генератор екшену та передаємо значення фільтра
   // Відправляємо результат - екшен зміни фільтра

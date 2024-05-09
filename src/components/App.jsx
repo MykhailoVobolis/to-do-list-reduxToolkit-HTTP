@@ -6,12 +6,12 @@ import TaskList from "./TaskList/TaskList";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTasks } from "../redux/operations";
-import { getError, getIsLoading } from "../redux/selectors";
+import { selectError, selectIsLoading } from "../redux/selectors";
 
 export default function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchTasks());
